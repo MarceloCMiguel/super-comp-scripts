@@ -21,7 +21,7 @@ int main(){
     int max_items, max_peso;
     cin >> max_items >> max_peso;
 
-    cout<< max_items << " " << max_peso << endl;
+    // cout<< max_items << " " << max_peso << endl;
     for (int i = 0; i < max_items; i++)
     {
         int peso_temp, valor_temp;
@@ -29,10 +29,10 @@ int main(){
         item item_temp;
         item_temp.peso = peso_temp;
         item_temp.valor = valor_temp;
-        cout<< item_temp.peso<<" "<<item_temp.valor<< endl;
+        // cout<< item_temp.peso<<" "<<item_temp.valor<< endl;
         items.push_back(item_temp);
     }
-    cout<<endl;
+    // cout<<endl;
 
     sort(items.begin(), items.end(), compareItem);
 
@@ -55,7 +55,7 @@ int main(){
             bag.valor += items[i].valor;
         }
     }
-    cout<<endl;
+    // cout<<endl;
     cout<<bag.peso<<" "<<bag.valor << endl;
 
     

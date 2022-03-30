@@ -1,0 +1,8 @@
+1- Modele este problema como um problema de otimização.
+R: O cliente busca investir em ações que lhe tenham um maior lucro. Dessa forma,
+o lucro sobre cada ação pode ser o 'retorno do lote' - 'imposto a pagar'
+
+2- Crie uma entrada de dados para a instância do problema como mostrado acima.
+R: A primeira linha terá, separado por espaços, a quantidade de ações e o 
+orçamento do cliente. Nas linhas seguintes terá, separado por espaços, o valor do lote,
+retorno do lote e o imposto a pagar  

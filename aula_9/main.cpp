@@ -35,7 +35,7 @@ int main(){
     int max_items, max_peso;
     cin >> max_items >> max_peso;
     
-    // cout<< max_items << " " << max_peso << endl;
+    cout<< max_items << " " << max_peso << endl;
     for (int i = 0; i < max_items; i++)
     {
         int peso_temp, valor_temp;
@@ -44,11 +44,11 @@ int main(){
         item_temp.peso = peso_temp;
         item_temp.valor = valor_temp;
         item_temp.id = i;
-        // cout<< item_temp.peso<<" "<<item_temp.valor<< endl;
+        cout<< item_temp.peso<<" "<<item_temp.valor<< endl;
         items.push_back(item_temp);
     }
 
-    // cout<<endl;
+    cout<<endl;
 
     default_random_engine generator(10);
     uniform_real_distribution<double> distribution(0.0,1.0);
@@ -76,7 +76,7 @@ int main(){
     }
 
     sort(bags.begin(),bags.end(),compareItem);
-    // cout<<bags[0].id<<" "<<bags[0].peso <<" "<< bags[0].valor << endl;
+    cout<<bags[0].id<<" "<<bags[0].peso <<" "<< bags[0].valor << endl;
     // for (int number_bag = 0; number_bag < max_bags;number_bag++){
     //     cout<<bags[number_bag].id<<" "<<bags[number_bag].peso <<" "<< bags[number_bag].valor << endl;
     // }
@@ -96,9 +96,8 @@ int main(){
         }   
     }
     sort(bags.begin(),bags.end(),compareItem);
-    // cout<<bags[0].id<<" "<<bags[0].peso <<" "<< bags[0].valor << endl;
+    cout<<bags[0].id<<" "<<bags[0].peso <<" "<< bags[0].valor << endl;
 
-    cout<<bags[0].peso <<" "<< bags[0].valor << endl;
 
 
     
