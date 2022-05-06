@@ -48,6 +48,31 @@ double acoes2(int W, vector<acao> items, vector<acao>& usados, vector<acao>& mel
     
 }
 
+int knapSack(int W, vector<acao> items, int n)
+{
+  
+    // Base Case
+    if (n == 0 || W == 0)
+        return 0;
+  
+    // If weight of the nth item is more
+    // than Knapsack capacity W, then
+    // this item cannot be included
+    // in the optimal solution
+    if (items[n - 1].custo > W)
+        return knapSack(W, items,n - 1);
+  
+    // Return the maximum of two cases:
+    // (1) nth item included
+    // (2) not included
+    else
+        return max(
+            items[n - 1].lucro
+                + knapSack(W - items[n - 1].custo, 
+                           items, n - 1),
+            knapSack(W, items, n - 1));
+}
+
 
 int main(){
     int n, orcamento;
@@ -73,6 +98,7 @@ int main(){
     sort(acoes.begin(), acoes.end(), [](auto& i, auto& j){return i.lucro > j.lucro;});
     
     cout << "RESULTADO = " << acoes2(orcamento, acoes, usado, melhor) << endl;
+    cout << "RESULTADO = " << knapSack(orcamento, acoes, acoes.size()) << endl;
     int valor = 0;
     for(auto& el: melhor) {
             valor+= el.lucro;

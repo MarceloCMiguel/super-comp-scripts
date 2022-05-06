@@ -2,7 +2,7 @@ import random
 import numpy as np
 n_max = 200
 m = 1
-for n in np.arange(5,301,1):
+for n in np.arange(5,n_max+1,1):
      cap_max = random.randint(n//2,n*2)
      lista_obj = []
      for i in range(n):
